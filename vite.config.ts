@@ -2,8 +2,8 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
 export default defineConfig({
-  root: '.',  // Define a raiz do projeto como o diretório atual
-  base: '/',  // URL base para os assets
+  base: '/site-mcam/', // Adicione esta linha com o nome do seu repositório
+  root: '.',
   build: {
     outDir: 'dist',
     emptyOutDir: true,
@@ -15,11 +15,11 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    open: true  // Abre o navegador automaticamente
+    open: true
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src')  // Permite usar @ como alias para a pasta src
+      '@': resolve(__dirname, 'src')
     }
   }
 })
