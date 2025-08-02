@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                        // Define a versão do JavaScript para a qual o código será compilado
+    "useDefineForClassFields": true,
+    "module": "ESNext",                       // Usa o sistema de módulos mais moderno
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // Inclui as bibliotecas do DOM (para 'document') e do JS moderno (para 'Set')
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "strict": true,                          // Habilita checagens de tipo mais rigorosas
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"]                        // Diz ao TypeScript para compilar apenas os arquivos dentro da pasta 'src'
+}
