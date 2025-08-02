@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,28 +9,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script type="module" src="/src/main.ts" defer></script>
 </head>
-<body class="bg-gray-100 font-['Inter',sans-serif]">
 
-    <header class="bg-gradient-to-r from-red-800 to-red-900 shadow-lg sticky top-0 z-20">
+<body class="bg-mcam-green-50 font-sans">
+
+    <header class="bg-gradient-to-r from-mcam-green-900 to-mcam-green-800 shadow-lg sticky top-0 z-20">
         <div class="container mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-4">
             <a href="/" class="transform hover:scale-105 transition-transform duration-200">
                 <img src="/assets/logo.webp" alt="Logo da Empresa" class="h-16">
             </a>
 
             <div class="w-full md:w-auto md:flex-1 max-w-lg relative group order-3 md:order-2">
-                <input id="search-input" type="text" placeholder="O que você procura hoje?" class="w-full py-3 pl-5 pr-12 rounded-lg border-2 border-transparent focus:border-red-500 focus:ring-2 focus:ring-red-200 transition-all duration-300 bg-white/95">
-                <button class="absolute inset-y-0 right-0 flex items-center justify-center w-12 bg-red-600 rounded-r-lg hover:bg-red-700 transition-colors duration-200">
-                    <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg>
+                <input id="search-input" type="text" placeholder="O que você procura hoje?" class="w-full py-3 pl-5 pr-12 rounded-lg border-2 border-transparent 
+                               focus:border-mcam-green-500 focus:ring-2 focus:ring-mcam-green-200 
+                               transition-all duration-300 bg-white/95">
+                <button class="absolute inset-y-0 right-0 flex items-center justify-center w-12 
+                               bg-mcam-green-700 rounded-r-lg hover:bg-mcam-green-600 transition-colors duration-200">
+                    <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>
                 </button>
             </div>
 
             <div class="text-right text-white hidden md:block order-2 md:order-3">
                 <div class="flex items-center space-x-3">
-                    <div class="bg-red-700 p-3 rounded-full">
-                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6.75Z" /></svg>
+                    <div class="bg-mcam-green-700/80 p-3 rounded-full">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6.75Z" />
+                        </svg>
                     </div>
                     <div>
-                        <p class="text-sm text-gray-200">Fale Conosco</p>
+                        <p class="text-sm text-mcam-green-200">Fale Conosco</p>
                         <p class="font-bold text-lg">(43) 99663-9255</p>
                     </div>
                 </div>
@@ -39,8 +48,8 @@
 
     <div class="container mx-auto bg-white min-h-screen">
         <div class="flex flex-col md:flex-row">
-            <aside class="w-full md:w-64 border-b md:border-r border-gray-200 p-6">
-                <h2 class="bg-gradient-to-r from-red-700 to-red-800 text-white font-bold p-4 text-lg rounded-lg shadow-md">
+            <aside class="w-full md:w-64 border-b md:border-r border-mcam-green-100 p-6">
+                <h2 class="bg-gradient-to-r from-mcam-green-800 to-mcam-green-700 text-white font-bold p-4 text-lg rounded-lg shadow-md">
                     Categorias
                 </h2>
                 <ul id="category-list" class="space-y-2 mt-4">
@@ -48,7 +57,7 @@
             </aside>
 
             <main class="flex-1 p-6">
-                <h1 id="category-title" class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-gray-200 pb-3"></h1>
+                <h1 id="category-title" class="text-3xl font-bold text-mcam-green-900 mb-6 border-b-2 border-mcam-green-100 pb-3"></h1>
                 
                 <nav id="pagination-controls" class="mb-6"></nav>
                 
@@ -58,4 +67,5 @@
         </div>
     </div>
 </body>
+
 </html>

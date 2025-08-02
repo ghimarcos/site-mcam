@@ -9,10 +9,10 @@ export interface Product {
 
 // Nossa lista de produtos de exemplo
 export const products: Product[] = [
-    { id: 1, code: '1400', name: 'BATEDEIRA P/ TRINCOS RETA E 1520', category: 'Batedeiras', image: 'assets/batedeira-1.png' },
-    { id: 2, code: '1401', name: 'POLIDO BATEDEIRA P/ TRINCO IS 1520 E 1503', category: 'Batedeiras', image: 'assets/batedeira-1.png' },
-    { id: 3, code: '1401-L', name: 'POLIDO MAXILIRA SIMPLES', category: 'Batedeiras', image: 'assets/batedeira-1.png' },
-    { id: 4, code: '1507-CF', name: 'CONTRA FECHADURA COM TRINCO ROLETE', category: 'Contra Fechaduras', image: 'assets/batedeira-1.png' },
-    { id: 5, code: '1507-D', name: 'CONTRA FECHADURA DOURADA', category: 'Contra Fechaduras', image: 'assets/batedeira-1.png' },
-    { id: 6, code: 'DOB-01', name: 'DOBRADIÇA AUTOMÁTICA', category: 'Dobradiças e Pivôs', image: 'assets/batedeira-1.png' },
+    { id: 1, code: '3532', name: 'PLACA FECH. P/ JANELA', category: 'Metais 01', image: 'assets/batedeira-1.png' },
+    { id: 2, code: '1401', name: 'PLACA FECH. CENTRAL S/ PUXADOR E 1503', category: 'Metais 01', image: 'assets/batedeira-1.png' },
+    { id: 3, code: '3532', name: 'PLACA FECH. P/ JANELA', category: 'Metais 02', image: 'assets/batedeira-1.png' },
+    { id: 4, code: '3230 / 1511AX', name: 'ESPELHO INJETADO REFORÇADO C/ APARADOR P/ 3530', category: 'Metais 02', image: 'assets/batedeira-1.png' },
+    { id: 5, code: '3230 / 1511AX', name: 'ESPELHO INJETADO REFORÇADO C/ APARADOR P/ 3530', category: 'Ferragens', image: 'assets/batedeira-1.png' },
+    { id: 6, code: '5001', name: 'FLANGE CARRETA DIVERSAS', category: 'Flanges', image: 'assets/batedeira-1.png' },
 ];
