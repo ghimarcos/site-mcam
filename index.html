@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCAM Ferragens</title>
+    <title>MCAM Ferragens - Soluções de Alta Performance</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -14,87 +20,217 @@
                 extend: {
                     fontFamily: {
                         'sans': ['Inter', 'sans-serif'],
+                        'body': ['Roboto', 'sans-serif'],
                     },
                     colors: {
                         'mcam-green': {
-                            50: '#f1f3f1',
-                            100: '#e2e7e3',
-                            200: '#c6d0c7',
-                            300: '#a9b9ab',
-                            400: '#8da28f',
-                            500: '#708b74',
-                            600: '#55715a',
-                            700: '#3d5841',
-                            800: '#2a3e2d',
-                            900: '#1c2f1f', // Sua cor principal
-                        }
+                            50: '#f5f7f5',
+                            100: '#e1e8e2',
+                            200: '#c4d1c6',
+                            300: '#a7bba9',
+                            400: '#8b_a_58d',
+                            500: '#6e8e72',
+                            600: '#56755b',
+                            700: '#415c46',
+                            800: '#2e4333',
+                            900: '#1d2f21',
+                        },
+                        'mcam-accent': '#f9a826', // Um toque de cor vibrante para CTAs
                     }
                 }
             }
         }
     </script>
+    <style>
+        .bento-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .product-card {
+            animation-delay: calc(var(--animation-order) * 100ms);
+        }
+    </style>
 </head>
 
-<body class="bg-mcam-green-50 font-sans">
+<body class="bg-mcam-green-50 font-body text-gray-700">
 
-    <header class="bg-gradient-to-r from-mcam-green-900 to-mcam-green-800 shadow-lg sticky top-0 z-20">
+    <header
+        class="bg-gradient-to-r from-mcam-green-900 to-mcam-green-800 shadow-xl sticky top-0 z-50 border-b-2 border-mcam-accent">
         <div class="container mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-4">
-            <a href="/" class="transform hover:scale-105 transition-transform duration-200">
-                <img src="assets/logo.webp" alt="Logo da Empresa" class="h-16">
+            <a href="/" class="transform hover:scale-105 transition-transform duration-300">
+                <img src="assets/logo.webp" alt="Logo da Empresa" class="h-16 rounded-md p-1">
             </a>
-            <div class="w-full md:w-auto md:flex-1 max-w-lg relative group order-3 md:order-2">
-                <input id="search-input" type="text" placeholder="O que você procura hoje?"
-                    class="w-full py-3 pl-5 pr-12 rounded-lg border-2 border-transparent focus:border-mcam-green-500 focus:ring-2 focus:ring-mcam-green-200 transition-all duration-300 bg-white/95">
+
+            <div class="w-full md:w-auto md:flex-1 max-w-xl relative group order-3 md:order-2">
+                <input id="search-input" type="text" placeholder="Buscar por código ou nome do produto..."
+                    class="w-full py-3 pl-5 pr-14 rounded-full border-2 border-transparent focus:border-mcam-accent focus:ring-2 focus:ring-mcam-accent/50 focus:ring-offset-2 focus:ring-offset-mcam-green-900 transition-all duration-300 bg-white/95 shadow-lg placeholder-gray-500">
                 <button
-                    class="absolute inset-y-0 right-0 flex items-center justify-center w-12 bg-mcam-green-700 rounded-r-lg hover:bg-mcam-green-600 transition-colors duration-200">
-                    <svg class="w-5 h-5 text-white" xmlns="http://www.w.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
+                    class="absolute inset-y-0 right-0 flex items-center justify-center w-14 bg-mcam-accent text-white rounded-r-full hover:bg-opacity-90 transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-mcam-accent">
+                    <svg class="w-5 h-5 transition-transform duration-300 group-hover:scale-110"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                             d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                     </svg>
                 </button>
             </div>
-            <div class="text-right text-white hidden md:block order-2 md:order-3">
-                <div class="flex items-center space-x-3">
-                    <div class="bg-mcam-green-700/80 p-3 rounded-full">
-                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6.75Z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <p class="text-sm text-mcam-green-200">Fale Conosco</p>
-                        <p class="font-bold text-lg">(43) 99663-9255</p>
-                    </div>
+
+            <div class="order-2 md:order-3">
+                <div class="flex items-center space-x-4">
+                    <a href="https://wa.me/5543996639255?text=Olá!%20Gostaria%20de%20falar%20com%20um%20consultor."
+                        target="_blank"
+                        class="flex items-center space-x-3 text-white p-3 rounded-lg transition-colors duration-300 hover:bg-white/10 group">
+                        <div class="bg-green-500 p-3 rounded-full shadow-md group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16">
+                                <path
+                                    d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                            </svg>
+                        </div>
+                        <div class="font-sans">
+                            <p class="text-sm text-mcam-green-200">Fale Conosco</p>
+                            <p class="font-bold text-lg tracking-wider">(43) 99663-9255</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </header>
 
-    <div class="container mx-auto bg-white min-h-screen">
+    <div class="container mx-auto bg-white min-h-screen shadow-2xl shadow-black/10">
         <div class="flex flex-col md:flex-row">
-            <aside class="w-full md:w-64 border-b md:border-r border-mcam-green-100 p-6">
+            <aside class="w-full md:w-72 border-b md:border-r border-gray-100 p-6 bg-mcam-green-50/50">
                 <h2
-                    class="bg-gradient-to-r from-mcam-green-800 to-mcam-green-700 text-white font-bold p-4 text-lg rounded-lg shadow-md">
+                    class="bg-gradient-to-r from-mcam-green-800 to-mcam-green-700 text-white font-bold p-4 text-xl rounded-lg shadow-lg mb-8 font-sans text-center">
                     Categorias
                 </h2>
-                <ul id="category-list" class="space-y-2 mt-4"></ul>
+                <ul id="category-list" class="space-y-2"></ul>
             </aside>
 
-            <main class="flex-1 p-6">
-                <h1 id="category-title"
-                    class="text-3xl font-bold text-mcam-green-900 mb-6 border-b-2 border-mcam-green-100 pb-3"></h1>
-                <nav id="pagination-controls" class="mb-6"></nav>
-                <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            <main class="flex-1 p-6 lg:p-10">
+                <div id="main-content-header" class="mb-8">
+                    <h1 id="category-title"
+                        class="text-4xl font-extrabold text-mcam-green-900 mb-2 border-b-4 border-mcam-accent pb-4 font-sans">
+                    </h1>
+                    <p id="product-count" class="text-gray-500"></p>
+                </div>
+                <div id="product-grid" class="bento-grid"></div>
+                <nav id="pagination-controls" class="mt-12"></nav>
             </main>
         </div>
     </div>
 
+    <footer class="bg-mcam-green-900 text-white font-sans">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+                <div class="space-y-4 col-span-1 lg:col-span-1">
+                    <a href="/" class="inline-block">
+                        <img src="assets/logo.webp" alt="Logo da MCAM Ferragens"
+                            class="h-16 bg-white/10 p-2 rounded-md">
+                    </a>
+                    <p class="text-mcam-green-200 text-base max-w-xs">
+                        Especialistas em ferragens e componentes de alta qualidade para carretas e indústrias.
+                    </p>
+                </div>
+
+                <div class="col-span-1 lg:col-span-1">
+                    <h3
+                        class="font-bold text-lg mb-4 text-white uppercase tracking-wider border-b-2 border-mcam-accent pb-2">
+                        Navegação</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#"
+                                class="text-mcam-green-200 hover:text-mcam-accent transition-colors duration-200">Início</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-mcam-green-200 hover:text-mcam-accent transition-colors duration-200">Todos
+                                os Produtos</a></li>
+                        <li><a href="#"
+                                class="text-mcam-green-200 hover:text-mcam-accent transition-colors duration-200">Sobre
+                                Nós</a></li>
+                        <li><a href="#"
+                                class="text-mcam-green-200 hover:text-mcam-accent transition-colors duration-200">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-span-1 md:col-span-2 lg:col-span-2">
+                    <h3
+                        class="font-bold text-lg mb-4 text-white uppercase tracking-wider border-b-2 border-mcam-accent pb-2">
+                        Nossas Informações</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        <address class="not-italic space-y-4 text-mcam-green-200">
+                            <div class="flex items-start gap-4">
+                                <svg class="w-6 h-6 text-mcam-accent mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span>Rua Exemplo, 123 - Centro<br>Arapongas, PR - 86700-000</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <svg class="w-6 h-6 text-mcam-accent flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                <a href="mailto:contato@mcamferragens.com.br"
+                                    class="hover:text-mcam-accent transition-colors">contato@mcamferragens.com.br</a>
+                            </div>
+                        </address>
+                        <div class="flex flex-col space-y-4">
+                            <p class="font-semibold text-mcam-green-100">Horário de Funcionamento:</p>
+                            <p>Seg - Sex: 08:00 - 18:00</p>
+                            <p>Sáb: 08:00 - 12:00</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="bg-mcam-green-800/50">
+            <div class="container mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center text-sm">
+                <p class="text-mcam-green-300">&copy; 2025 MCAM Ferragens. Todos os direitos reservados.</p>
+                <div class="flex space-x-4 mt-4 sm:mt-0">
+                    <a href="#" class="text-mcam-green-300 hover:text-white transition-colors duration-200"><svg
+                            class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7.02h-2.53v-2.89h2.53V9.8c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.89h-2.33v7.02c4.78-.75 8.44-4.9 8.44-9.9C22 6.53 17.5 2.04 12 2.04z" />
+                        </svg></a>
+                    <a href="#" class="text-mcam-green-300 hover:text-white transition-colors duration-200"><svg
+                            class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M11.999 7.377a4.623 4.623 0 100 9.248 4.623 4.623 0 000-9.248zm0 7.627a3.004 3.004 0 110-6.008 3.004 3.004 0 010 6.008z" />
+                            <path d="M16.949 6.868a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z" />
+                            <path
+                                d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm7.006 16.49c-.244.59-.666 1.012-1.256 1.256-.972.447-3.23.344-3.75.344s-2.778.103-3.75-.344c-.59-.244-1.012-.666-1.256-1.256-.447-.972-.344-3.23-.344-3.75s-.103-2.778.344-3.75c.244-.59.666-1.012 1.256-1.256.972-.447 3.23-.344 3.75-.344s2.778.103 3.75.344c.59.244 1.012.666 1.256 1.256.447.972.344 3.23.344 3.75s.103 2.778-.344 3.75z" />
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script type="module">
-        // --- NOSSO "BANCO DE DADOS" DE PRODUTOS ---
         const products = [
             { id: 1, code: '5001', name: 'FLANGE CARRETA DIVERSAS', category: 'Flanges', image: 'assets/batedeira-1.png' },
             { id: 2, code: '5002', name: 'FLANGE CARRETA RANDON NOVA', category: 'Flanges', image: 'assets/batedeira-1.png' },
@@ -122,14 +258,13 @@
             { id: 24, code: '1101', name: 'DOBRADIÇA PIVOTANTE SUPERIOR REFORÇADA', category: 'Ferragens', image: 'assets/batedeira-1.png' },
         ];
 
-        // --- Seletores de Elementos do DOM ---
         const categoryListEl = document.getElementById('category-list');
         const productGridEl = document.getElementById('product-grid');
         const categoryTitleEl = document.getElementById('category-title');
         const paginationControlsEl = document.getElementById('pagination-controls');
         const searchInputEl = document.getElementById('search-input');
+        const productCountEl = document.getElementById('product-count');
 
-        // --- Estado da Aplicação ---
         let currentCategory = 'Todos';
         let currentPage = 1;
         let currentSearchTerm = '';
@@ -139,10 +274,24 @@
             if (!productGridEl || !categoryListEl || !categoryTitleEl || !paginationControlsEl) return;
 
             const categories = ['Todos', ...new Set(products.map(p => p.category))];
-            categoryListEl.innerHTML = categories.map(category => `
-                <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-mcam-green-50 hover:text-mcam-green-700 rounded-md transition-all duration-200 ${currentCategory === category ? 'bg-mcam-green-100 text-mcam-green-900 font-bold' : ''}" data-category="${category}">${category}</a></li>
-            `).join('');
 
+            // Renderização das Categorias (Melhorada)
+            categoryListEl.innerHTML = categories.map(category => {
+                const isActive = currentCategory === category;
+                return `
+                <li>
+                    <a href="#" 
+                       class="flex items-center justify-between px-4 py-3 text-lg rounded-lg transition-all duration-200 group ${isActive
+                        ? 'bg-mcam-accent text-white font-bold shadow-md'
+                        : 'text-mcam-green-800 hover:bg-mcam-green-100 hover:text-mcam-green-900 hover:translate-x-1'}" 
+                       data-category="${category}">
+                       <span>${category}</span>
+                       <span class="text-sm font-normal opacity-70 group-hover:opacity-100 transition-opacity">${isActive ? '✓' : '>'}</span>
+                    </a>
+                </li>
+            `}).join('');
+
+            // Filtragem de Produtos
             let filteredProducts = products;
             if (currentCategory !== 'Todos') {
                 filteredProducts = filteredProducts.filter(p => p.category === currentCategory);
@@ -152,37 +301,60 @@
                 filteredProducts = filteredProducts.filter(p => p.name.toLowerCase().includes(term) || p.code.toLowerCase().includes(term));
             }
 
-            categoryTitleEl.textContent = currentSearchTerm ? `Resultados para "${currentSearchTerm}"` : (currentCategory === 'Todos' ? 'Produtos em Destaque' : currentCategory);
+            // Atualização do Título e Contador
+            categoryTitleEl.textContent = currentSearchTerm ? `Resultados para "${currentSearchTerm}"` : (currentCategory === 'Todos' ? 'Nossos Produtos em Destaque' : currentCategory);
+            productCountEl.textContent = `${filteredProducts.length} produtos encontrados`;
 
+
+            // Paginação
             const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
             const startIndex = (currentPage - 1) * productsPerPage;
             const paginatedProducts = filteredProducts.slice(startIndex, startIndex + productsPerPage);
 
+            // Renderização da Grade de Produtos (Melhorada)
+            productGridEl.innerHTML = ''; // Limpa antes de adicionar novos
             if (paginatedProducts.length === 0) {
-                productGridEl.innerHTML = `<p class="col-span-full text-center text-slate-500 py-10">Nenhum produto encontrado.</p>`;
+                productGridEl.innerHTML = `<p class="col-span-full text-center text-slate-500 py-16 text-xl">Nenhum produto encontrado para sua busca.</p>`;
             } else {
-                productGridEl.innerHTML = paginatedProducts.map(product => `
-                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm text-center flex flex-col group overflow-hidden transition hover:shadow-lg hover:-translate-y-1">
-                        <div class="relative"><img src="${product.image}" alt="${product.name}" class="w-full h-48 object-contain p-4 transition-transform duration-300 group-hover:scale-105"></div>
-                        <div class="p-4 flex-grow flex flex-col border-t">
-                            <h3 class="font-semibold text-gray-800 flex-grow text-sm">${product.name}</h3>
-                            <p class="text-xs text-gray-400 mt-2 mb-4">Cód: ${product.code}</p>
-                            <button data-code="${product.code}" data-name="${product.name}" class="whatsapp-btn mt-auto w-full bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 transition-all duration-300 flex items-center justify-center gap-2">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
-                                <span>WhatsApp</span>
+                paginatedProducts.forEach((product, index) => {
+                    const card = document.createElement('div');
+                    card.className = "bg-white border border-gray-200/80 rounded-2xl shadow-lg text-center flex flex-col group overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 fade-in product-card";
+                    card.style.setProperty('--animation-order', index);
+
+                    card.innerHTML = `
+                        <div class="relative bg-mcam-green-50 p-6 overflow-hidden">
+                            <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-contain transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute top-2 right-2 bg-mcam-green-800 text-white text-xs font-bold px-2 py-1 rounded-full">${product.category}</div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col border-t-2 border-gray-100">
+                            <h3 class="font-sans font-bold text-gray-800 flex-grow text-lg leading-tight mb-2">${product.name}</h3>
+                            <p class="text-base text-gray-500 mt-2 mb-6 font-mono bg-gray-100 px-2 py-1 rounded-md">Cód: ${product.code}</p>
+                            <button data-code="${product.code}" data-name="${product.name}" 
+                                    class="whatsapp-btn mt-auto w-full bg-green-500 text-white font-bold py-3 px-4 rounded-lg hover:bg-green-600 transition-all duration-300 flex items-center justify-center gap-3 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-300">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
+                                <span>Solicitar Orçamento</span>
                             </button>
                         </div>
-                    </div>
-                `).join('');
+                    `;
+                    productGridEl.appendChild(card);
+                });
             }
 
+            // Controles de Paginação (Melhorados)
             paginationControlsEl.innerHTML = '';
             if (totalPages > 1) {
-                let paginationHTML = '<div class="flex items-center justify-center space-x-1">';
+                let paginationHTML = '<div class="flex items-center justify-center space-x-2 font-sans">';
+                // Botão Anterior
+                paginationHTML += `<button class="pagination-arrow w-10 h-10 rounded-lg transition-all duration-200 bg-white text-mcam-green-800 hover:bg-mcam-green-100 border border-gray-200 disabled:opacity-50" data-page="${currentPage - 1}" ${currentPage === 1 ? 'disabled' : ''}>&lt;</button>`;
+
                 for (let i = 1; i <= totalPages; i++) {
-                    const isActive = i === currentPage ? 'bg-mcam-green-700 text-white' : 'bg-mcam-green-100 text-mcam-green-800 hover:bg-mcam-green-200';
-                    paginationHTML += `<button class="w-10 h-10 rounded-md transition ${isActive}" data-page="${i}">${i}</button>`;
+                    const isActive = i === currentPage ? 'bg-mcam-green-700 text-white font-bold shadow-md' : 'bg-white text-mcam-green-800 hover:bg-mcam-green-100 border border-gray-200';
+                    paginationHTML += `<button class="w-10 h-10 rounded-lg transition-all duration-200 ${isActive}" data-page="${i}">${i}</button>`;
                 }
+
+                // Botão Próximo
+                paginationHTML += `<button class="pagination-arrow w-10 h-10 rounded-lg transition-all duration-200 bg-white text-mcam-green-800 hover:bg-mcam-green-100 border border-gray-200 disabled:opacity-50" data-page="${currentPage + 1}" ${currentPage === totalPages ? 'disabled' : ''}>&gt;</button>`;
+
                 paginationHTML += '</div>';
                 paginationControlsEl.innerHTML = paginationHTML;
             }
@@ -191,18 +363,23 @@
         function debounce(func, waitFor) {
             let timeout;
             return (...args) => {
-                if (timeout) clearTimeout(timeout);
+                clearTimeout(timeout);
                 timeout = setTimeout(() => func(...args), waitFor);
             };
         }
 
+        // --- Event Listeners ---
+
         categoryListEl?.addEventListener('click', e => {
             e.preventDefault();
             const target = e.target.closest('a');
-            if (target?.dataset.category) {
+            if (target?.dataset.category && target.dataset.category !== currentCategory) {
                 currentCategory = target.dataset.category;
                 currentPage = 1;
+                currentSearchTerm = '';
+                searchInputEl.value = '';
                 render();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         });
 
@@ -211,6 +388,7 @@
             if (target?.dataset.page) {
                 currentPage = parseInt(target.dataset.page, 10);
                 render();
+                document.getElementById('main-content-header').scrollIntoView({ behavior: 'smooth' });
             }
         });
 
@@ -218,7 +396,7 @@
             const target = e.target.closest('.whatsapp-btn');
             if (target?.dataset.code && target?.dataset.name) {
                 const { code, name } = target.dataset;
-                const message = encodeURIComponent(`Olá! Gostaria de um orçamento para: ${name} (código: ${code})`);
+                const message = encodeURIComponent(`Olá! Gostaria de um orçamento para o produto: ${name} (Cód: ${code})`);
                 window.open(`https://wa.me/5543996639255?text=${message}`, '_blank');
             }
         });
@@ -226,10 +404,12 @@
         searchInputEl?.addEventListener('input', debounce((event) => {
             currentSearchTerm = event.target.value;
             currentPage = 1;
+            currentCategory = 'Todos'; // Reseta a categoria ao pesquisar
             render();
-        }, 300));
+        }, 400));
 
-        render();
+        // --- Renderização Inicial ---
+        document.addEventListener('DOMContentLoaded', render);
     </script>
 </body>
 
