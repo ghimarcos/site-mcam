@@ -8,23 +8,13 @@
     <link rel="stylesheet" href="template/default/css/print.min.css" type="text/css" media="print">
     <link rel="stylesheet" href="template/default/css/destaque_full.css" type="text/css" media="screen">
 
-    <!--[if lte IE 7]><link rel="stylesheet" href="template/default/css/?style_ie.min.css" type="text/css" /><![endif]-->
-    <!--[if IE]><link rel="stylesheet" href="template/default/css/?style_all_ie.min.css" type="text/css" /><![endif]-->
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
-    <script
-        type="text/javascript">var SUBPASTA = ""; var BASETPL = "https://lojaonline.microum.com.br/vomopa/v_2.0/template";</script>
-    <script type="text/javascript"
-        src="https://lojaonline.microum.com.br/vomopa/v_2.0/template/script/lang.php?d=stylo"></script>
-    <script type="text/javascript"
-        src="https://lojaonline.microum.com.br/vomopa/v_2.0/template/script/lib/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript"
-        src="https://lojaonline.microum.com.br/vomopa/v_2.0/template/script/lib.min.js"></script>
-    <script type="text/javascript" src="template/default/script/src/java.js?8"></script>
-    <link rel="shortcut icon" href="template/default/imgs/favicon.ico" type="image/x-icon">
-    <script type="text/javascript"
-        src="https://lojaonline.microum.com.br/vomopa/v_2.0/template/script/lib/corner.min.js"></script>
-    <script type="text/javascript"
-        src="https://lojaonline.microum.com.br/vomopa/v_2.0/template/script/lib/destaque_full-0.1.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="template/default/script/src/produtos.js"></script>
+
+    <script type="text/javascript" src="template/default/script/src/java.js"></script>
 </head>
 
 <body>
@@ -38,7 +28,7 @@
 
                 <a href="/"><img src="template/default/imgs/site/mcam-logo-2.png" alt="" class="logo"></a>
 
-               
+
 
                 <form name="busca1" method="get" action="/produtos/buscar" class="busca">
                     <input type="text" class="text" id="qb" name="q" value="Digite o que procura"
@@ -53,7 +43,7 @@
                 <div class="menub">
                     <ul>
                         <li><a href="/sobre">Loja Física</a></li>
-                        <li><a href="/contato">Fale Conosco</a></li>
+                        <li><a href="#" class="btn-mostrar-contato">Fale Conosco</a></li>
                         <li><a href="/login">Meus Pedidos</a></li>
                         <li>
                             <a href="#">Catálogos</a>
@@ -96,6 +86,26 @@
     <div class="meio ">
 
         <div class="lat_esq" style="border-top-left-radius: 30px; border-bottom-right-radius: 30px;">
+
+            <h3>Categorias</h3>
+            <div id="menu_site">
+                <ul id="mxp" style="border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
+                    <li><a href="#" class="btn-mostrar-contato">CONTATO</a></li>
+                    <li><a href="#" class="btn-mostrar-inicio">INÍCIO</a></li>
+                    <li><a href="#" data-category="Metais 01">METAIS 01</a></li>
+                    <li><a href="#" data-category="Metais 02">METAIS 02</a></li>
+                    <li><a href="#" data-category="Ferragens">FERRAGENS</a></li>
+                    <li><a href="#" data-category="Flanges">FLANGES</a></li>
+                </ul>
+            </div>
+
+            <br><br>
+            <div align="center">
+            </div>
+
+        </div>
+
+        <!-- <div class="lat_esq" style="border-top-left-radius: 30px; border-bottom-right-radius: 30px;">
 
             <h3>Categorias</h3>
             <div id="menu_site">
@@ -150,10 +160,37 @@
             </div>
 
 
-        </div><!-- lat_esq -->
+        </div> -->
 
         <div id="conteudo">
             <div class="cont">
+
+                <div id="pagina-contato" style="display: none; padding: 20px;">
+                    <h2 class="titulo" style="border-radius: 10px; margin-bottom: 20px;">Fale Conosco</h2>
+                    <div style="font-size: 16px; line-height: 1.8;">
+                        <p><strong>Endereço:</strong><br>
+                            Carlos de Laet, 5137, Boqueirão. Curitiba - PR.
+                        </p>
+                        <p><strong>Telefone Fixo:</strong><br>
+                            (41) 3538-4004
+                        </p>
+                        <p><strong>WhatsApp:</strong><br>
+                            <a href="https://web.whatsapp.com/send?phone=5541999421381&text=Contato%20via%20site"
+                                target="_blank" style="color: green; text-decoration: underline;">
+                                (41) 99942-1381
+                            </a>
+                        </p>
+                        <p><strong>Email:</strong><br>
+                            <a href="mailto:contato@mcamacessorios.com.br"
+                                style="color: green; text-decoration: underline;">
+                                contato@mcamacessorios.com.br
+                            </a>
+                        </p>
+                        <p><strong>Horário de Atendimento:</strong><br>
+                            Segunda a Sexta, das 08:00 às 18:00.
+                        </p>
+                    </div>
+                </div>
 
 
                 <!-- Div Banner grande central -->
@@ -175,8 +212,13 @@
                     </div>
                 </div>
 
+                <!-- Lista de Produtos -->
+                <div id="resultado-produtos" class="listar_produtos" style="display: none;">
+                </div>
 
-
+                <!-- Paginação -->
+                <div id="paginacao" style="text-align: center; padding: 20px;">
+                </div>
 
 
 
