@@ -1,0 +1,133 @@
+#destaque_full {
+    background-repeat: no-repeat;
+    background-position: left top;
+    margin-top: 0;
+    position: relative;
+    z-index: 4;
+    margin-left: 0;
+    width: 711px;
+    height: 280px
+}
+
+#destaque_full.central {
+    background-repeat: repeat-x;
+    background-position: center top
+}
+
+#destaque_full .ddir {
+    background-repeat: no-repeat;
+    background-position: right top;
+    height: 364px;
+    width: 100%
+}
+
+#destaque_full .dmeio_centra {
+    width: 100%;
+    height: 366px;
+    margin: 0 auto;
+    position: relative
+}
+
+#destaque_full .dmeio {
+    background-repeat: no-repeat;
+    width: 100%;
+    top: 5px;
+    left: 0;
+    height: 100%;
+    position: absolute;
+    display: none
+}
+
+#destaque_full .preco {
+    position: absolute;
+    left: 210px;
+    top: 100px;
+    width: 100px;
+    z-index: 3;
+    text-align: center;
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    display: none
+}
+
+#destaque_full .preco b {
+    font-size: 20px
+}
+
+#destaque_full .imagem {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    width: 711px;
+    height: 280px;
+    text-align: center
+}
+
+#destaque_full .imagem img {
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%
+}
+
+#destaque_full h2 {
+    position: absolute;
+    margin: 0;
+    left: 50px;
+    top: 20px;
+    width: 280px;
+    font-style: normal;
+    z-index: 3;
+    color: #000;
+    font-size: 25px;
+    background: #ccc;
+    display: none
+}
+
+#destaque_full p.txtt {
+    position: absolute;
+    left: 50px;
+    top: 60px;
+    width: 250px;
+    z-index: 3;
+    color: #000;
+    font-size: 15px;
+    font-weight: normal;
+    margin: 0;
+    background: #ccc;
+    display: none
+}
+
+#destaque_full .contador {
+    position: absolute;
+    width: 350px;
+    height: 20px;
+    z-index: 3;
+    padding: 3px;
+    overflow: auto;
+    bottom: 120px;
+    left: 40px;
+    overflow: hidden;
+    display: none
+}
+
+#destaque_full .contador ul {
+    margin: 0;
+    padding: 0
+}
+
+#destaque_full .contador li {
+    margin: 0;
+    padding: 0;
+    float: left;
+    display: block;
+    width: 35px;
+    height: 28px;
+    background-repeat: no-repeat;
+    cursor: pointer
+}
+
+#destaque_full .contador li.on {
+    background-repeat: no-repeat
+}

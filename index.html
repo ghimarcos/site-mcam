@@ -1,238 +1,44 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCAM Ferragens - Soluções de Alta Performance</title>
+    <meta charset="utf-8">
+    <title>MCAM - Acessórios </title>
+    <!-- Corrigindo os caminhos dos arquivos CSS -->
+    <link rel="stylesheet" href="template/default/css/style.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="template/default/css/print.min.css" type="text/css" media="print">
+    <link rel="stylesheet" href="template/default/css/destaque_full.css" type="text/css" media="screen">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'sans': ['Inter', 'sans-serif'],
-                        'body': ['Roboto', 'sans-serif'],
-                    },
-                    colors: {
-                        'mcam-green': {
-                            50: '#f5f7f5',
-                            100: '#e1e8e2',
-                            200: '#c4d1c6',
-                            300: '#a7bba9',
-                            400: '#8b_a_58d',
-                            500: '#6e8e72',
-                            600: '#56755b',
-                            700: '#415c46',
-                            800: '#2e4333',
-                            900: '#1d2f21',
-                        },
-                        'mcam-accent': '#f9a826', // Um toque de cor vibrante para CTAs
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        /* Estilos copiados do site de referência para clonagem do layout */
-        /* #topo {
-            display: table;
-            position: relative;
-            height: 107px;
-            width: 100%;
-            z-index: 100;
-        } */
-
-
-        /* Cada div interna se comportará como uma célula de tabela */
-        /* #topo>div {
-            display: table-cell;
-            vertical-align: top;
-            position: relative;
-        } */
-
-        /* Célula da Esquerda (com a curva vermelha) */
-        /* .esq {
-            background: url(/assets/topo_1.png) no-repeat top left;
-            width: 50%;
-        } */
-
-        /* Célula do Meio */
-        /* .meiotp {
-            background: #f1f1f1 url(/assets/topo_2.png) repeat-x bottom left;
-            width: 25%;
-        } */
-
-        /* Célula da Direita */
-        /* .dir {
-            background: #f1f1f1 url(/assets/topo_3.png) repeat-x bottom left;
-            width: 25%;
-        } */
-
-        body {
-            color: #000;
-            font-size: 12px;
-            margin: 0 auto;
-            background: #fff url(/template/default/imgs/site/topo_4.png) repeat-x;
-        }
-
-        * {
-            font-family: Arial, Helvetica, sans-serif;
-            list-style: none;
-        }
-
-        #topo {
-            height: 167px;
-            width: 100%;
-            margin: 0 auto;
-            position: relative;
-            display: table;
-            z-index: 100;
-            font-weight: bold;
-        }
-
-        #topo .esq,
-        #topo .dir {
-            display: table-cell;
-            height: 100%;
-            vertical-align: top;
-        }
-
-        #topo .esq {
-            background: url(/assets/topo_1.png) repeat-x bottom right;
-        }
-
-        #topo .meiotp {
-            vertical-align: top;
-            width: 959px;
-            display: table-cell;
-            height: 100%;
-            background: url(/assets/topo_2.png) repeat-x;
-        }
-
-        #topo .meioct {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-
-        a {
-            text-decoration: none;
-            color: #3b3b33;
-            font-weight: bold;
-            outline: 0;
-        }
-
-        #topo .logo {
-            margin: 13px 0 0 0;
-            float: left;
-        }
-
-        img {
-            border: 0;
-        }
-
-        #topo .busca {
-            position: absolute;
-            bottom: 00px;
-            left: 343px;
-            height: 44px;
-            width: 400px;
-            z-index: 2;
-        }
-
-        #topo .mais {
-            position: absolute;
-            top: 18px;
-            left: 363px;
-            width: 300px;
-            height: 39px;
-        }
-
-        #topo .mais b {
-            color: #ffdc73;
-            font-size: 14px;
-            display: block;
-            font-weight: normal;
-        }
-
-        #topo .mais b a {
-            color: #fff;
-            font-size: 13px;
-            text-decoration: underline;
-        }
-
-        #topo .menub {
-            position: absolute;
-            top: 70px;
-            left: 353px;
-            height: 32px;
-            width: 580px;
-        }
-
-        #topo .menub ul {
-            padding: 0;
-            margin: 0;
-        }
-
-        #topo .menub li {
-            float: left;
-            padding: 0;
-            position: relative;
-        }
-
-        #topo .menub a {
-            color: #fff;
-            display: block;
-            font-size: 17px;
-            padding: 0 10px;
-            font-weight: bold;
-        }
-
-        #topo .telefone {
-            position: absolute;
-            bottom: 10px;
-            right: -10px;
-            width: 160px;
-            height: 40px;
-            color: #126602;
-            font-size: 16px;
-            font-weight: normal;
-            line-height: 23px;
-        }
-
-        #topo .dir {
-            background: url(/assets/topo_3.png) repeat-x bottom right;
-        }
-    </style>
+    <!--[if lte IE 7]><link rel="stylesheet" href="/template/default/css/?style_ie.min.css" type="text/css" /><![endif]-->
+    <!--[if IE]><link rel="stylesheet" href="/template/default/css/?style_all_ie.min.css" type="text/css" /><![endif]-->
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <script
+        type="text/javascript">var SUBPASTA = ""; var BASETPL = "https://lojaonline.microum.com.br/vomopa/v_2.0/template";</script>
+    <script type="text/javascript"
+        src="https://lojaonline.microum.com.br/vomopa/v_2.0/template/script/lang.php?d=stylo"></script>
+    <script type="text/javascript"
+        src="https://lojaonline.microum.com.br/vomopa/v_2.0/template/script/lib/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript"
+        src="https://lojaonline.microum.com.br/vomopa/v_2.0/template/script/lib.min.js"></script>
+    <script type="text/javascript" src="/template/default/script/src/java.js?8"></script>
+    <link rel="shortcut icon" href="/template/default/imgs/favicon.ico" type="image/x-icon">
+    <script type="text/javascript"
+        src="https://lojaonline.microum.com.br/vomopa/v_2.0/template/script/lib/corner.min.js"></script>
+    <script type="text/javascript"
+        src="https://lojaonline.microum.com.br/vomopa/v_2.0/template/script/lib/destaque_full-0.1.min.js"></script>
 </head>
 
 <body>
 
-
     <div id="topo">
         <div class="esq">
             <div class="esqb">&nbsp;</div>
-            <!-- <a href="/"
-                    class="absolute top-4 left-4 md:left-8 transform hover:scale-105 transition-transform duration-300">
-                    <img src="assets/logo.webp" alt="Logo da Empresa" class="h-16">
-                </a> -->
         </div>
-
         <div class="meiotp">
             <div class="meioct">
-                <a href="/">
-                    <img src="/assets/mcam-logo-2.png" alt="mcam logo" class="logo">
-                </a>
+
+                <a href="/"><img src="/template/default/imgs/site/mcam-logo-2.png" alt="" class="logo"></a>
+
+               
 
                 <form name="busca1" method="get" action="/produtos/buscar" class="busca">
                     <input type="text" class="text" id="qb" name="q" value="Digite o que procura"
@@ -253,10 +59,9 @@
                             <a href="#">Catálogos</a>
                             <ol style="display: none;">
                                 <li><a href="/Catalogo Stylo Ferragens.pdf" target="_blank">Ferragens</a></li>
-                                <li><a href="/Manual 3000 e 3002 Trilho STY.pdf" target="_blank">Manual
-                                        3000/3002</a></li>
-                                <li><a href="/Manual 3001 MINI Trilho STY_2024.pdf" target="_blank">Manual 3001</a>
+                                <li><a href="/Manual 3000 e 3002 Trilho STY.pdf" target="_blank">Manual 3000/3002</a>
                                 </li>
+                                <li><a href="/Manual 3001 MINI Trilho STY_2024.pdf" target="_blank">Manual 3001</a></li>
                                 <li><a href="/MANUAL 3003.pdf" target="_blank">Manual 3003</a></li>
                                 <li><a href="/Manual 3005 Trilho STY 29-11 (23).pdf" target="_blank">Manual 3005</a>
                                 </li>
@@ -268,212 +73,293 @@
 
                 <div class="telefone" onmouseleave="$('#telefones').slideUp()">
                     <a href="#" onmouseover="$('#telefones').slideDown()"
-                        onclick="$('#telefones').slideDown(); return false;">
-                        Confira nossos telefones
-                    </a>
+                        onclick="$('#telefones').slideDown();return false">Confira nossos telefones</a>
                     <div id="telefones"
                         style="display: none; z-index: 100; background-color: rgb(255, 255, 255); padding: 8px; border: 1px solid rgb(176, 56, 56);">
                         (41)3538-4004 (41)3538-4009 (41)3538-4005 (41)3538-3835 (41)3538-3833<br>
                         <a class="tel"
                             href="https://web.whatsapp.com/send?phone=5541998340538&amp;text=Contato%20via%20site"
-                            target="_blank">
-                            41 99834-0538
-                        </a>
+                            target="_blank">41 99834-0538</a>
                     </div>
                 </div>
 
             </div>
         </div>
-
         <div class="dir">
             <div class="dirb">&nbsp;</div>
         </div>
+
     </div>
 
 
 
+    <div class="meio ">
 
-    <script type="module">
-        const products = [
-            { id: 1, code: '5001', name: 'FLANGE CARRETA DIVERSAS', category: 'Flanges', image: 'assets/batedeira-1.png' },
-            { id: 2, code: '5002', name: 'FLANGE CARRETA RANDON NOVA', category: 'Flanges', image: 'assets/batedeira-1.png' },
-            { id: 3, code: '5003', name: 'FLANGE CARRETA MINI RANDON / MB 1113', category: 'Flanges', image: 'assets/batedeira-1.png' },
-            { id: 4, code: '5045', name: 'FLANGE CARRETA RANDON NOVA SEM FURO C/ MARCAÇÃO 5F.', category: 'Flanges', image: 'assets/batedeira-1.png' },
-            { id: 5, code: '5055', name: 'FLANGE CARRETA BONANO 160MM', category: 'Flanges', image: 'assets/batedeira-1.png' },
-            { id: 6, code: '5006', name: 'FLANGE CARRETA DIVERSAS PESCOÇO CURTO', category: 'Flanges', image: 'assets/batedeira-1.png' },
-            { id: 7, code: '5007', name: 'FLANGE CARRETA RANDON NOVA PESCOÇO CURTO', category: 'Flanges', image: 'assets/batedeira-1.png' },
-            { id: 8, code: '5008', name: 'RÉGUA DIANTEIRA MB 915 / ACELLO / ATEGO', category: 'Metais 01', image: 'assets/batedeira-1.png' },
-            { id: 9, code: '5009', name: 'RÉGUA DIANTEIRA VOLVO RODA RAIDADA', category: 'Metais 01', image: 'assets/batedeira-1.png' },
-            { id: 10, code: '5010', name: 'RÉGUA DIANTEIRA RODA DISCO', category: 'Metais 01', image: 'assets/batedeira-1.png' },
-            { id: 11, code: '5011', name: 'RÉGUA TRAÇÃO VOLVO REDUZIDA', category: 'Metais 01', image: 'assets/batedeira-1.png' },
-            { id: 12, code: '5012', name: 'FLANGE RÉGUA VOLVO / FORD CANELA SECA', category: 'Flanges', image: 'assets/batedeira-1.png' },
-            { id: 13, code: '3530', name: 'PLACA FECH. P/ PORTA CORRER', category: 'Metais 02', image: 'assets/batedeira-1.png' },
-            { id: 14, code: '3532', name: 'PLACA FECH. P/ JANELA', category: 'Metais 02', image: 'assets/batedeira-1.png' },
-            { id: 15, code: '3534', name: 'CONTRA FECH. P/ 3530', category: 'Metais 02', image: 'assets/batedeira-1.png' },
-            { id: 16, code: '3536', name: 'CONTRA FECH. P/ 3532', category: 'Metais 02', image: 'assets/batedeira-1.png' },
-            { id: 17, code: '3210 (1520X)', name: 'PLACA FECH. CENTRAL S/ PUXADOR', category: 'Metais 02', image: 'assets/batedeira-1.png' },
-            { id: 18, code: '3211', name: 'CONTRA FECH. C/ ABA P/ 3210', category: 'Metais 02', image: 'assets/batedeira-1.png' },
-            { id: 19, code: '3230', name: 'ESPELHO INJETADO REFORÇADO', category: 'Ferragens', image: 'assets/batedeira-1.png' },
-            { id: 20, code: '3212', name: 'CONTRA FECH. S/ ABA P/ 3210', category: 'Metais 02', image: 'assets/batedeira-1.png' },
-            { id: 21, code: '1520', name: 'PLACA INJETADA C/ PARAFUSOS EMBUTIDOS', category: 'Metais 02', image: 'assets/batedeira-1.png' },
-            { id: 22, code: '1504-A', name: 'ESPELHO EM ALUM. COM BATENTE P/1520 INJETADO REFORÇADO', category: 'Ferragens', image: 'assets/batedeira-1.png' },
-            { id: 23, code: '1531', name: 'CONTRA FECH. COM BATENTE P/1520', category: 'Metais 02', image: 'assets/batedeira-1.png' },
-            { id: 24, code: '1101', name: 'DOBRADIÇA PIVOTANTE SUPERIOR REFORÇADA', category: 'Ferragens', image: 'assets/batedeira-1.png' },
-        ];
+        <div class="lat_esq" style="border-top-left-radius: 30px; border-bottom-right-radius: 30px;">
 
-        const categoryListEl = document.getElementById('category-list');
-        const productGridEl = document.getElementById('product-grid');
-        const categoryTitleEl = document.getElementById('category-title');
-        const paginationControlsEl = document.getElementById('pagination-controls');
-        const searchInputEl = document.getElementById('search-input');
-        const productCountEl = document.getElementById('product-count');
+            <h3>Categorias</h3>
+            <div id="menu_site">
+                <ul id="mxp" style="border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
+                    <li><a href="http://www.styloferragens.com.br/categoria/CONTATO+?cod=135">CONTATO </a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/INICIO?cod=131">INÍCIO</a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/BATEDEIRAS?cod=103">BATEDEIRAS</a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/BOTOES+DE+CORRECAO?cod=92">BOTÕES DE
+                            CORREÇÃO</a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/CONTRA+FECHADURAS?cod=102">CONTRA
+                            FECHADURAS</a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/CONTRA+TRINCOS?cod=96">CONTRA TRINCOS</a>
+                    </li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/CORRENTES++CABOS+DE+ACO++CORDOES?cod=130">CORRENTES
+                            / CABOS DE AÇO / CORDÕES</a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/DOBRADICAS+E+PIVOS?cod=93">DOBRADIÇAS E
+                            PIVÔS</a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/FECHADURAS?cod=97">FECHADURAS</a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/FERRAGENS+EM+KITS?cod=120">FERRAGENS EM
+                            KITS</a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/GUARNICOES+E+ESCOVAS?cod=108">GUARNIÇÕES E
+                            ESCOVAS</a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/HASTES?cod=107">HASTES</a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/KIT+BOX?cod=123">KIT BOX</a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/KIT+JANELA?cod=134">KIT JANELA</a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/KIT+PIA+?cod=136">KIT PIA </a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/MOLAS?cod=115">MOLAS</a></li>
+                    <li><a
+                            href="http://www.styloferragens.com.br/categoria/PERFIL+DE+ALUMINIO+ANODIZADO+FOSCO+?cod=137">PERFIL
+                            DE ALUMÍNIO ANODIZADO FOSCO </a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/PERFIS+DE+ALUMINIO+NA+COR+BRANCA?cod=129">PERFIS
+                            DE ALUMÍNIO NA COR BRANCA</a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/PERFIS+DE+ALUMINIO+NA+COR+PRETA?cod=133">PERFIS
+                            DE ALUMÍNIO NA COR PRETA</a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/PRATELEIRAS?cod=116">PRATELEIRAS</a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/PUXADORES?cod=105">PUXADORES</a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/ROLDANAS?cod=100">ROLDANAS</a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/SILICONES+?cod=114">SILICONES </a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/SISTEMA+DESLIZANTE?cod=121">SISTEMA
+                            DESLIZANTE</a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/SPIDERS?cod=111">SPIDERS</a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/SUPORTES?cod=94">SUPORTES</a></li>
+                    <li><a href="http://www.styloferragens.com.br/categoria/TRINCOS?cod=98">TRINCOS</a></li>
+                    <li class="u"><a href="http://www.styloferragens.com.br/categoria/VENTOSAS?cod=112">VENTOSAS</a>
+                    </li>
+                </ul>
 
-        let currentCategory = 'Todos';
-        let currentPage = 1;
-        let currentSearchTerm = '';
-        const productsPerPage = 6;
+            </div>
 
-        function render() {
-            if (!productGridEl || !categoryListEl || !categoryTitleEl || !paginationControlsEl) return;
-
-            const categories = ['Todos', ...new Set(products.map(p => p.category))];
-
-            // Renderização das Categorias (Melhorada)
-            categoryListEl.innerHTML = categories.map(category => {
-                const isActive = currentCategory === category;
-                return `
-                <li>
-                    <a href="#" 
-                       class="flex items-center justify-between px-4 py-3 text-lg rounded-lg transition-all duration-200 group ${isActive
-                        ? 'bg-mcam-accent text-white font-bold shadow-md'
-                        : 'text-mcam-green-800 hover:bg-mcam-green-100 hover:text-mcam-green-900 hover:translate-x-1'}" 
-                       data-category="${category}">
-                       <span>${category}</span>
-                       <span class="text-sm font-normal opacity-70 group-hover:opacity-100 transition-opacity">${isActive ? '✓' : '>'}</span>
-                    </a>
-                </li>
-            `}).join('');
-
-            // Filtragem de Produtos
-            let filteredProducts = products;
-            if (currentCategory !== 'Todos') {
-                filteredProducts = filteredProducts.filter(p => p.category === currentCategory);
-            }
-            if (currentSearchTerm) {
-                const term = currentSearchTerm.toLowerCase();
-                filteredProducts = filteredProducts.filter(p => p.name.toLowerCase().includes(term) || p.code.toLowerCase().includes(term));
-            }
-
-            // Atualização do Título e Contador
-            categoryTitleEl.textContent = currentSearchTerm ? `Resultados para "${currentSearchTerm}"` : (currentCategory === 'Todos' ? 'Nossos Produtos em Destaque' : currentCategory);
-            productCountEl.textContent = `${filteredProducts.length} produtos encontrados`;
+            <br><br>
+            <div align="center">
+            </div>
 
 
-            // Paginação
-            const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
-            const startIndex = (currentPage - 1) * productsPerPage;
-            const paginatedProducts = filteredProducts.slice(startIndex, startIndex + productsPerPage);
+        </div><!-- lat_esq -->
 
-            // Renderização da Grade de Produtos (Melhorada)
-            productGridEl.innerHTML = ''; // Limpa antes de adicionar novos
-            if (paginatedProducts.length === 0) {
-                productGridEl.innerHTML = `<p class="col-span-full text-center text-slate-500 py-16 text-xl">Nenhum produto encontrado para sua busca.</p>`;
-            } else {
-                paginatedProducts.forEach((product, index) => {
-                    const card = document.createElement('div');
-                    card.className = "bg-white border border-gray-200/80 rounded-2xl shadow-lg text-center flex flex-col group overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 fade-in product-card";
-                    card.style.setProperty('--animation-order', index);
+        <div id="conteudo">
+            <div class="cont">
 
-                    card.innerHTML = `
-                        <div class="relative bg-mcam-green-50 p-6 overflow-hidden">
-                            <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-contain transition-transform duration-500 group-hover:scale-110">
-                            <div class="absolute top-2 right-2 bg-mcam-green-800 text-white text-xs font-bold px-2 py-1 rounded-full">${product.category}</div>
+
+                <!-- Div Banner grande central -->
+                <div id="destaque_full" style="background-image: url('')">
+                    <div class="ddir" style="background-image: url('')">
+                        <div class="dmeio_centra">
+                            <div class="dmeio" style="background-image: url(&quot;&quot;); display: block;">
+                                <div class="imagem" title="">
+                                    <img alt="Banner"
+                                        src="https://www.styloferragens.com.br//data/destaques/kit  box.jpg">
+                                </div>
+                                <h2>Kit Box Dourado</h2>
+                                <p class="txtt"></p>
+                                <!-- <p class="preco"><b>R$<br></b></p> -->
+                            </div>
+                            <div class="contador" data-x="no-num"><img src="" class="normal" alt=""><img src=""
+                                    class="on" alt=""></div>
                         </div>
-                        <div class="p-6 flex-grow flex flex-col border-t-2 border-gray-100">
-                            <h3 class="font-sans font-bold text-gray-800 flex-grow text-lg leading-tight mb-2">${product.name}</h3>
-                            <p class="text-base text-gray-500 mt-2 mb-6 font-mono bg-gray-100 px-2 py-1 rounded-md">Cód: ${product.code}</p>
-                            <button data-code="${product.code}" data-name="${product.name}" 
-                                    class="whatsapp-btn mt-auto w-full bg-green-500 text-white font-bold py-3 px-4 rounded-lg hover:bg-green-600 transition-all duration-300 flex items-center justify-center gap-3 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-300">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
-                                <span>Solicitar Orçamento</span>
-                            </button>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <h2 class="titulo" style="border-radius: 10px;">Destaques</h2>
+
+                <div class="listar_produtos">
+                    <div class="produto" style="border-radius: 10px;">
+                        <div class="cont">
+                            <a href="/produtos/1520TR-FECHADURA+COM+TRINCO+ROLETE?cod=970"><img
+                                    src="https://www.styloferragens.com.br/data/970/thumb_1520tr02.jpeg" alt=""
+                                    class="imgprod"></a><br>
+                            <h4 class="nome">1520TR-FECHADURA COM TRINCO ROLETE</h4>
+                            <!-- <u class="preco">R$ 105,15</u> -->
+                            <a href="/produtos/1520TR-FECHADURA+COM+TRINCO+ROLETE?cod=970" class="comprar"><img
+                                    src="/template/default/imgs/site/botao_comprar.png"></a>
                         </div>
-                    `;
-                    productGridEl.appendChild(card);
-                });
-            }
+                    </div>
+                    <div class="produto" style="border-radius: 10px;">
+                        <div class="cont">
+                            <a
+                                href="/produtos/1679C+-+PUXADOR+MODELO+C+BARRA+CHATA+19MM+X+6+MM+X+300+MM+ENTRE+FUROS?cod=1534"><img
+                                    src="https://www.styloferragens.com.br/data/1534/thumb_arquivo.jpg" alt=""
+                                    class="imgprod"></a><br>
+                            <h4 class="nome">1679C - PUXADOR MODELO C BARRA CHATA 19MM X 6 MM X 300 MM ENTRE FUROS</h4>
+                            <!-- <u class="preco">R$ 51,68</u> -->
+                            <a href="/produtos/1679C+-+PUXADOR+MODELO+C+BARRA+CHATA+19MM+X+6+MM+X+300+MM+ENTRE+FUROS?cod=1534"
+                                class="comprar"><img src="/template/default/imgs/site/botao_comprar.png"></a>
+                        </div>
+                    </div>
+                    <div class="produto produtoUltimo" style="border-radius: 10px;">
+                        <div class="cont">
+                            <a
+                                href="/produtos/1679C_DOURADO+-+PUXADOR+MODELO+C+BARRA+CHATA+19MM+X+6+MM+X+300+MM+ENTRE+FUROS?cod=1536"><img
+                                    src="https://www.styloferragens.com.br/data/1536/thumb_arquivo.jpg" alt=""
+                                    class="imgprod"></a><br>
+                            <h4 class="nome">1679C_DOURADO - PUXADOR MODELO C BARRA CHATA 19MM X 6 MM X 300 MM ENTRE
+                                FUROS</h4>
+                            <!-- <u class="preco">Sob Consulta</u> -->
+                            <a href="/produtos/1679C_DOURADO+-+PUXADOR+MODELO+C+BARRA+CHATA+19MM+X+6+MM+X+300+MM+ENTRE+FUROS?cod=1536"
+                                class="comprar"><img src="/template/default/imgs/site/botao_comprar.png"></a>
+                        </div>
+                    </div>
+                    <div class="produto" style="border-radius: 10px;">
+                        <div class="cont">
+                            <a href="/produtos/KITG01-KIT+ACESSORIOS+PARA+SACADA+PANORAMICA+?cod=1495"><img
+                                    src="https://www.styloferragens.com.br/data/1495/thumb_3fa6b456-d784-4605-ad7b-8.jfif"
+                                    alt="" class="imgprod"></a><br>
+                            <h4 class="nome">KITG01-KIT ACESSÓRIOS PARA SACADA PANORÂMICA </h4>
+                            <!-- <u class="preco">R$ 13,41</u> -->
+                            <a href="/produtos/KITG01-KIT+ACESSORIOS+PARA+SACADA+PANORAMICA+?cod=1495"
+                                class="comprar"><img src="/template/default/imgs/site/botao_comprar.png"></a>
+                        </div>
+                    </div>
+                    <div class="produto" style="border-radius: 10px;">
+                        <div class="cont">
+                            <a href="/produtos/PORTA+CADEADO+EMBUTIDO+PARA+1510X+E+1511X?cod=1450"><img
+                                    src="https://www.styloferragens.com.br/data/1450/thumb_pc.jpeg" alt=""
+                                    class="imgprod"></a><br>
+                            <h4 class="nome">PORTA CADEADO EMBUTIDO PARA 1510X E 1511X</h4>
+                            <!-- <u class="preco">R$ 22,15</u> -->
+                            <a href="/produtos/PORTA+CADEADO+EMBUTIDO+PARA+1510X+E+1511X?cod=1450" class="comprar"><img
+                                    src="/template/default/imgs/site/botao_comprar.png"></a>
+                        </div>
+                    </div>
+                    <div class="produto produtoUltimo" style="border-radius: 10px;">
+                        <div class="cont">
+                            <a href="/produtos/KIT+BOX+QUADRADO+FRONTAL+DE+CORRER+COM+1%2C2+METROS+BRANCO?cod=1480"><img
+                                    src="https://www.styloferragens.com.br/data/1480/thumb_c73e63e5-15fb-4bcf-9017-c.jfif"
+                                    alt="" class="imgprod"></a><br>
+                            <h4 class="nome">KIT BOX QUADRADO FRONTAL DE CORRER COM 1,2 METROS BRANCO</h4>
+                            <!-- <u class="preco">R$ 137,72</u> -->
+                            <a href="/produtos/KIT+BOX+QUADRADO+FRONTAL+DE+CORRER+COM+1%2C2+METROS+BRANCO?cod=1480"
+                                class="comprar"><img src="/template/default/imgs/site/botao_comprar.png"></a>
+                        </div>
+                    </div>
+                    <div class="produto" style="border-radius: 10px;">
+                        <div class="cont">
+                            <a href="/produtos/KIT+BOX+QUADRADO+FRONTAL+DE+CORRER+COM+1%2C2+METROS+PRETO?cod=1484"><img
+                                    src="https://www.styloferragens.com.br/data/1484/thumb_26d1df97-1bbd-4b50-8f2d-1.jfif"
+                                    alt="" class="imgprod"></a><br>
+                            <h4 class="nome">KIT BOX QUADRADO FRONTAL DE CORRER COM 1,2 METROS PRETO</h4>
+                            <!-- <u class="preco">R$ 139,15</u> -->
+                            <a href="/produtos/KIT+BOX+QUADRADO+FRONTAL+DE+CORRER+COM+1%2C2+METROS+PRETO?cod=1484"
+                                class="comprar"><img src="/template/default/imgs/site/botao_comprar.png"></a>
+                        </div>
+                    </div>
+                    <div class="produto" style="border-radius: 10px;">
+                        <div class="cont">
+                            <a
+                                href="/produtos/1679C_ROSE+-+PUXADOR+MODELO+C+BARRA+CHATA+19MM+X+6+MM+X+300+MM+ENTRE+FUROS?cod=1537"><img
+                                    src="https://www.styloferragens.com.br/data/1537/thumb_98c93f89-a0aa-48db-b151-7.jfif"
+                                    alt="" class="imgprod"></a><br>
+                            <h4 class="nome">1679C_ROSÊ - PUXADOR MODELO C BARRA CHATA 19MM X 6 MM X 300 MM ENTRE FUROS
+                            </h4>
+                            <!-- <u class="preco">R$ 187,44</u> -->
+                            <a href="/produtos/1679C_ROSE+-+PUXADOR+MODELO+C+BARRA+CHATA+19MM+X+6+MM+X+300+MM+ENTRE+FUROS?cod=1537"
+                                class="comprar"><img src="/template/default/imgs/site/botao_comprar.png"></a>
+                        </div>
+                    </div>
+                    <div class="produto produtoUltimo" style="border-radius: 10px;">
+                        <div class="cont">
+                            <a href="/produtos/KIT+BOX+FRONTAL+SANFONADO+PRETO?cod=1459"><img
+                                    src="https://www.styloferragens.com.br/data/1459/thumb_WhatsApp Image 2022-07-15.jpeg"
+                                    alt="" class="imgprod"></a><br>
+                            <h4 class="nome">KIT BOX FRONTAL SANFONADO PRETO</h4>
+                            <!-- <u class="preco">R$ 251,67</u> -->
+                            <a href="/produtos/KIT+BOX+FRONTAL+SANFONADO+PRETO?cod=1459" class="comprar"><img
+                                    src="/template/default/imgs/site/botao_comprar.png"></a>
+                        </div>
+                    </div>
+                </div>
 
-            // Controles de Paginação (Melhorados)
-            paginationControlsEl.innerHTML = '';
-            if (totalPages > 1) {
-                let paginationHTML = '<div class="flex items-center justify-center space-x-2 font-sans">';
-                // Botão Anterior
-                paginationHTML += `<button class="pagination-arrow w-10 h-10 rounded-lg transition-all duration-200 bg-white text-mcam-green-800 hover:bg-mcam-green-100 border border-gray-200 disabled:opacity-50" data-page="${currentPage - 1}" ${currentPage === 1 ? 'disabled' : ''}>&lt;</button>`;
+            </div>
+        </div><!-- conteudo -->
 
-                for (let i = 1; i <= totalPages; i++) {
-                    const isActive = i === currentPage ? 'bg-mcam-green-700 text-white font-bold shadow-md' : 'bg-white text-mcam-green-800 hover:bg-mcam-green-100 border border-gray-200';
-                    paginationHTML += `<button class="w-10 h-10 rounded-lg transition-all duration-200 ${isActive}" data-page="${i}">${i}</button>`;
-                }
 
-                // Botão Próximo
-                paginationHTML += `<button class="pagination-arrow w-10 h-10 rounded-lg transition-all duration-200 bg-white text-mcam-green-800 hover:bg-mcam-green-100 border border-gray-200 disabled:opacity-50" data-page="${currentPage + 1}" ${currentPage === totalPages ? 'disabled' : ''}>&gt;</button>`;
 
-                paginationHTML += '</div>';
-                paginationControlsEl.innerHTML = paginationHTML;
-            }
-        }
 
-        function debounce(func, waitFor) {
-            let timeout;
-            return (...args) => {
-                clearTimeout(timeout);
-                timeout = setTimeout(() => func(...args), waitFor);
-            };
-        }
+    </div><!-- Meio -->
 
-        // --- Event Listeners ---
 
-        categoryListEl?.addEventListener('click', e => {
-            e.preventDefault();
-            const target = e.target.closest('a');
-            if (target?.dataset.category && target.dataset.category !== currentCategory) {
-                currentCategory = target.dataset.category;
-                currentPage = 1;
-                currentSearchTerm = '';
-                searchInputEl.value = '';
-                render();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        });
 
-        paginationControlsEl?.addEventListener('click', e => {
-            const target = e.target.closest('button');
-            if (target?.dataset.page) {
-                currentPage = parseInt(target.dataset.page, 10);
-                render();
-                document.getElementById('main-content-header').scrollIntoView({ behavior: 'smooth' });
-            }
-        });
+    <!-- Div rodape-->
+    <div class="rodapefundo">
+        <div class="meio">
+            <div class="caixa caixa1" style="max-width: 200px">
+                <h3>Institucional</h3>
+                <ul>
+                    <li><a href="/forma_pagamento">Forma Pagamento</a></li>
+                    <li><a href="/contato">Página de Contato</a></li>
+                    <li><a href="/seguranca">Segurança</a></li>
+                    <li><a href="/sobre_entrega">Sobre a Entrega</a></li>
+                    <li><a href="/sobre">MCAM Acessórios</a></li>
+                </ul>
+            </div>
+            <div class="caixa caixa2">
+                <img src="/template/default/imgs/site/formas_pagamento2.png?1" alt="Formas de Pagamento">
+            </div>
+            <div class="caixa caixa3">
+                <img src="/template/default/imgs/site/ambiente_seguro.png" alt="Ambiente Seguro">
+            </div>
+            <div class="caixa4">
+                <p><b class="b">Endereço:</b> Carlos de Laet, 5137, Boqueirão. Curitiba - PR. &nbsp;&nbsp;
+                    <b class="b">Telefone:</b> 41 3538 4004 &nbsp;&nbsp; <b class="b">Whatsapp:</b> <a
+                        href="https://web.whatsapp.com/send?phone=5541999421381&amp;text=Contato%20via%20site"
+                        target="_blank">41 99942 1381</a><br>
+                    <b class="b">CNPJ:</b> 19754074/0001-41
+                </p>
+            </div>
 
-        productGridEl?.addEventListener('click', e => {
-            const target = e.target.closest('.whatsapp-btn');
-            if (target?.dataset.code && target?.dataset.name) {
-                const { code, name } = target.dataset;
-                const message = encodeURIComponent(`Olá! Gostaria de um orçamento para o produto: ${name} (Cód: ${code})`);
-                window.open(`https://wa.me/5543996639255?text=${message}`, '_blank');
-            }
-        });
+        </div>
+    </div><!-- Div rodape_fundo -->
 
-        searchInputEl?.addEventListener('input', debounce((event) => {
-            currentSearchTerm = event.target.value;
-            currentPage = 1;
-            currentCategory = 'Todos'; // Reseta a categoria ao pesquisar
-            render();
-        }, 400));
+    <!-- <div class="rodape">
+        <a href="http://www.microum.com.br" target="_blank"><img src="/template/default/imgs/site/microum.png"
+                alt="Desenvolvimento e hospedagem Microum"></a>
+    </div> -->
 
-        // --- Renderização Inicial ---
-        document.addEventListener('DOMContentLoaded', render);
-    </script>
+
+    <!-- Box Aguarde -->
+    <div id="aguarde" style="display:none">Aguarde, carregando.<br><br><img src="/template/default/imgs/loading.gif"
+            alt="Carregando"></div>
+
+
+
+
+
+
+    <div id="aviso_cookie"
+        style="background:#fee3b9; border: 1px solid #98886f; font-size: 16px; width: calc(90% - 20px);position: fixed; z-index:1000; bottom: 100px; left: 5%;right: 5%; border-radius: 5px;padding: 15px; display: none">
+        Nosso site utiliza cookies para melhorar a experiência na navegação e permitir uma compra mais segura, de acordo
+        com a nossa política de privacidade.
+        <input
+            style="padding: 8px; border: 1px solid #50596b; background: #bca889; text-transform: uppercase; margin-left: 20px"
+            type="button" value="Concordar e Fechar" onclick="FecharAvisoCookie()">
+    </div>
+    <script>function FecharAvisoCookie() { document.cookie = "concordacookie=1; expires=Tue, 01 Jan 2030 00:00:00 UTC"; document.getElementById("aviso_cookie").style.display = "none"; } (function () { function getCookieValue(name) { let result = document.cookie.match("(^|[^;]+)\\s*" + name + "\\s*=\\s*([^;]+)"); return result ? result.pop() : ""; } if (getCookieValue('concordacookie') != 1) document.getElementById('aviso_cookie').style.display = "block"; }());</script>
+
+
+
+
+
+
 </body>
 
 </html>

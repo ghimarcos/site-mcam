@@ -1,0 +1,106 @@
+* {
+    font-family: Verdana,Arial,Helvetica,sans-serif
+}
+
+body {
+    color: #000;
+    font-size: 10px
+}
+
+img {
+    border: 0
+}
+
+.print {
+    display: block
+}
+
+#topo,#esquerda,#menu,#menuL,#contato,.naoprint,.rodapefundo,.lat_esq,.rodape {
+    display: none
+}
+
+.rodape {
+    margin-top: 30px
+}
+
+.confirma {
+    width: 600px;
+    display: block
+}
+
+.confirma table {
+    width: 500px;
+    border: 1px solid #062c50;
+    margin: 0 auto 10px auto
+}
+
+.confirma table thead th {
+    font-weight: bold;
+    font-size: 11px;
+    text-align: left;
+    color: #062c50;
+    padding: 4px;
+    border-bottom: 1px solid #062c50
+}
+
+.confirma tbody th {
+    text-align: right;
+    padding-right: 10px;
+    width: 150px
+}
+
+.confirma tbody td.t {
+    text-align: right;
+    font-weight: bold;
+    padding-right: 10px;
+    width: 150px
+}
+
+.confirma table thead.i {
+    color: #062c50
+}
+
+.confirma table .i td {
+    padding: 5px;
+    text-align: left
+}
+
+.status_venda {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    overflow: auto
+}
+
+.status_venda ul {
+    margin: 0;
+    padding: 0;
+    display: table;
+    width: 99%;
+    margin: 0 auto
+}
+
+.status_venda li {
+    float: left;
+    width: 25%;
+    display: table-cell
+}
+
+.status_venda.status_venda_maisum li {
+    width: 20%
+}
+
+.status_venda span {
+    display: none
+}
+
+.status_venda li b {
+    padding: 15px;
+    text-align: center;
+    display: block
+}
+
+.status_venda li.at b {
+    border: 1px solid #000;
+    text-transform: uppercase
+}
