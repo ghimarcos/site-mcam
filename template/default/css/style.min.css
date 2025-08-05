@@ -11,7 +11,7 @@ body {
     color: #000;
     font-size: 12px;
     margin: 0 auto;
-    background: #fff url('template/default/imgs/site/topo_4.png') repeat-x;
+    background: #fff url("template/default/imgs/site/topo_4.png") repeat-x;
 }
 
 td {
@@ -25,7 +25,7 @@ td {
 input.b {
     height: 15px;
     padding: 5px 5px 5px 5px;
-    background: #292929 url('template/default/imgs/fundo.botao.gif') repeat-x;
+    background: #292929 url("template/default/imgs/fundo.botao.gif") repeat-x;
     color: #e5e5e5;
     height: 25px;
 }
@@ -212,7 +212,7 @@ hr.cxcarrinho {
     width: 959px;
     display: table-cell;
     height: 100%;
-    background: url('template/default/imgs/site/topo_2.png') repeat-x;
+    background: url("template/default/imgs/site/topo_2.png") repeat-x;
 }
 
 #topo .meioct {
@@ -227,11 +227,11 @@ hr.cxcarrinho {
 }
 
 #topo .esq {
-    background: url('template/default/imgs/site/topo_1.png') repeat-x bottom right;
+    background: url("template/default/imgs/site/topo_1.png") repeat-x bottom right;
 }
 
 #topo .dir {
-    background: url('template/default/imgs/site/topo_3.png') repeat-x bottom right;
+    background: url("template/default/imgs/site/topo_3.png") repeat-x bottom right;
 }
 
 #topo .busca {
@@ -296,7 +296,7 @@ hr.cxcarrinho {
     right: 30px;
     width: 115px;
     height: 94px;
-    background: url('template/default/imgs/site/carrinho.png') no-repeat;
+    background: url("template/default/imgs/site/carrinho.png") no-repeat;
 }
 
 #topo .carrinho a {
@@ -481,14 +481,14 @@ hr.cxcarrinho {
     background: #FFF;
     margin: 0;
     width: 100%;
-    background: url('template/default/imgs/site/menub.png');
+    background: url("template/default/imgs/site/menub.png");
 }
 
 .lat_esq li {
     padding-bottom: 5px;
     position: relative;
     z-index: 40;
-    background: url('template/default/imgs/site/menu_bar.png') bottom left no-repeat;
+    background: url("template/default/imgs/site/menu_bar.png") bottom left no-repeat;
 }
 
 .lat_esq li:last-child {
@@ -531,7 +531,7 @@ hr.cxcarrinho {
 
 .lat_esq span.t {
     width: 190px;
-    background: url('template/default/imgs/layout/amp_r7_c2.png') no-repeat;
+    background: url("template/default/imgs/layout/amp_r7_c2.png") no-repeat;
     height: 43px;
     display: block;
 }
@@ -545,11 +545,11 @@ hr.cxcarrinho {
     height: 36px;
     font-size: 18px;
     font-weight: bold;
-    background: url('template/default/imgs/site/menu.png');
+    background: url("template/default/imgs/site/menu.png");
 }
 
 .lat_esq .rods {
-    background: url('template/default/imgs/layout/layout_ceparms_r13_c3.png') no-repeat;
+    background: url("template/default/imgs/layout/layout_ceparms_r13_c3.png") no-repeat;
     width: 166px;
     height: 16px;
     display: block;
@@ -603,7 +603,7 @@ hr.cxcarrinho {
     padding: 7px 7px 0 7px;
     font-size: 12px;
     border: 0;
-    background: #fff url('template/default/imgs/layout/form_2.jpg') repeat-x;
+    background: #fff url("template/default/imgs/layout/form_2.jpg") repeat-x;
     -moz-border-radius: 10px;
     -khtml-border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -625,7 +625,7 @@ hr.cxcarrinho {
     padding: 7px 0 0 0;
     font-size: 12px;
     border: 0;
-    background: #fff url('template/default/imgs/layout/form_2.jpg') repeat-x;
+    background: #fff url("template/default/imgs/layout/form_2.jpg") repeat-x;
     height: 24px;
     border: 1px solid #c9c9c9;
     border-top: 0;
@@ -694,20 +694,20 @@ hr.cxcarrinho {
 }
 
 .form .cinput .cicon.ciconerro {
-    background: url('template/default/imgs/layout/form_erro_info.png') no-repeat 2px 2px;
+    background: url("template/default/imgs/layout/form_erro_info.png") no-repeat 2px 2px;
     cursor: pointer;
 }
 
 .form .cinput .cicon.ciconok {
-    background: url('template/default/imgs/layout/form_ok.png') no-repeat 2px 2px;
+    background: url("template/default/imgs/layout/form_ok.png") no-repeat 2px 2px;
 }
 
 .form .cinput .cicon.ciconloading {
-    background: url('template/default/imgs/layout/form_loading_mini.gif') no-repeat 2px 2px;
+    background: url("template/default/imgs/layout/form_loading_mini.gif") no-repeat 2px 2px;
 }
 
 .form .cinput input.cerro {
-    background: url('template/default/imgs/layout/form_2_erro.jpg') repeat-x;
+    background: url("template/default/imgs/layout/form_2_erro.jpg") repeat-x;
 }
 
 .form .cinput .cmsg {
@@ -719,14 +719,14 @@ hr.cxcarrinho {
     z-index: 2;
     padding: 10px;
     font-weight: bold;
-    background: url('template/default/imgs/layout/form_box_erro.png');
+    background: url("template/default/imgs/layout/form_box_erro.png");
     border: 1px solid #c9c9c9;
     border-top: 0;
 }
 
 .msg_erro {
     padding: 10px;
-    background: url('template/default/imgs/layout/form_box_erro.png');
+    background: url("template/default/imgs/layout/form_box_erro.png");
     border: 1px solid #c9c9c9;
 }
 
@@ -1221,7 +1221,7 @@ h2.titulo {
     height: 100px;
     display: block;
     z-index: 2;
-    background: url('template/default/imgs/loading.gif') no-repeat center center
+    background: url("template/default/imgs/loading.gif") no-repeat center center
 }
 
 #zoom_thumb {
@@ -1267,7 +1267,7 @@ h2.titulo {
 
 .produto a.cb {
     height: 31px;
-    background: url('template/default/imgs/layout/fundo_botao.jpg') no-repeat;
+    background: url("template/default/imgs/layout/fundo_botao.jpg") no-repeat;
     color: #e5e5e5;
     width: 143px;
     display: block;
@@ -1332,14 +1332,14 @@ h2.titulo {
 
 #carrinho thead th {
     padding: 5px;
-    background: url('template/default/imgs/layout/fbx.jpg') repeat-x bottom left;
+    background: url("template/default/imgs/layout/fbx.jpg") repeat-x bottom left;
     text-align: left
 }
 
 #carrinho td {
     margin: 15px 0;
     padding: 5px 5px 30px 5px;
-    background: url('template/default/imgs/layout/fbx.jpg') repeat-x bottom left;
+    background: url("template/default/imgs/layout/fbx.jpg") repeat-x bottom left;
     vertical-align: middle
 }
 
@@ -1734,7 +1734,7 @@ h3.titulo {
 
 .status_venda td {
     width: 25%;
-    background: #efddeb url('template/default/imgs/layout/setastatusoff2.png') no-repeat top left;
+    background: #efddeb url("template/default/imgs/layout/setastatusoff2.png") no-repeat top left;
     color: #c1b2bd;
     height: 48px;
     border: 0;
@@ -1750,7 +1750,7 @@ h3.titulo {
     width: 13px;
     height: 48px;
     float: right;
-    background: #992728 url('template/default/imgs/layout/setastatusoff.png')
+    background: #992728 url("template/default/imgs/layout/setastatusoff.png")
 }
 
 .status_venda.status_venda_maisum b {
@@ -1765,21 +1765,21 @@ h3.titulo {
 }
 
 .status_venda td.at {
-    background: #992728 url('template/default/imgs/layout/setastatuson2.png') no-repeat top left;
+    background: #992728 url("template/default/imgs/layout/setastatuson2.png") no-repeat top left;
     color: #fff
 }
 
 .status_venda td.at span {
-    background: #992728 url('template/default/imgs/layout/setastatuson.png')
+    background: #992728 url("template/default/imgs/layout/setastatuson.png")
 }
 
 .status_venda td.ate {
-    background: #ffae3f url('template/default/imgs/layout/setastatusoff3.png') no-repeat top left;
+    background: #ffae3f url("template/default/imgs/layout/setastatusoff3.png") no-repeat top left;
     color: #fff
 }
 
 .status_venda td.ate span {
-    background: #ffae3f url('template/default/imgs/layout/setastatuson3.png')
+    background: #ffae3f url("template/default/imgs/layout/setastatuson3.png")
 }
 
 .status_venda td.a {
@@ -1791,7 +1791,7 @@ h3.titulo {
 }
 
 .status_venda td.atc {
-    background: #ff4db2 url('template/default/imgs/layout/setastatusoff4.png') no-repeat top left;
+    background: #ff4db2 url("template/default/imgs/layout/setastatusoff4.png") no-repeat top left;
     color: #fff
 }
 
@@ -1903,7 +1903,7 @@ h3.titulo {
 }
 
 .painel h3 span {
-    background: url('template/default/imgs/layout/borda_h2_r1_c7.png') no-repeat;
+    background: url("template/default/imgs/layout/borda_h2_r1_c7.png") no-repeat;
     float: right;
     display: block;
     height: 47px;
