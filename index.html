@@ -7,6 +7,7 @@
     <title>MCAM Ferragens - Soluções de Alta Performance</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,88 +44,252 @@
     </script>
     <style>
         /* Estilos copiados do site de referência para clonagem do layout */
-        #topo {
+        /* #topo {
             display: table;
             position: relative;
-            /* A altura exata do cabeçalho deles */
             height: 107px;
             width: 100%;
             z-index: 100;
-        }
+        } */
+
 
         /* Cada div interna se comportará como uma célula de tabela */
-        #topo>div {
+        /* #topo>div {
             display: table-cell;
             vertical-align: top;
             position: relative;
-            /* Para posicionar elementos dentro delas */
-        }
+        } */
 
         /* Célula da Esquerda (com a curva vermelha) */
-        .esq {
-            /* Fundo vermelho com a curva, precisa pegar a URL da imagem no site deles */
+        /* .esq {
             background: url(/assets/topo_1.png) no-repeat top left;
             width: 50%;
-            /* Ocupa metade da tela */
-        }
+        } */
 
         /* Célula do Meio */
-        .meiotp {
+        /* .meiotp {
             background: #f1f1f1 url(/assets/topo_2.png) repeat-x bottom left;
             width: 25%;
-        }
+        } */
 
         /* Célula da Direita */
-        .dir {
-            /* Fundo cinza claro, que na verdade é uma imagem repetida */
+        /* .dir {
             background: #f1f1f1 url(/assets/topo_3.png) repeat-x bottom left;
             width: 25%;
+        } */
+
+        body {
+            color: #000;
+            font-size: 12px;
+            margin: 0 auto;
+            background: #fff url(/template/default/imgs/site/topo_4.png) repeat-x;
+        }
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            list-style: none;
+        }
+
+        #topo {
+            height: 167px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            display: table;
+            z-index: 100;
+            font-weight: bold;
+        }
+
+        #topo .esq,
+        #topo .dir {
+            display: table-cell;
+            height: 100%;
+            vertical-align: top;
+        }
+
+        #topo .esq {
+            background: url(/assets/topo_1.png) repeat-x bottom right;
+        }
+
+        #topo .meiotp {
+            vertical-align: top;
+            width: 959px;
+            display: table-cell;
+            height: 100%;
+            background: url(/assets/topo_2.png) repeat-x;
+        }
+
+        #topo .meioct {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3b3b33;
+            font-weight: bold;
+            outline: 0;
+        }
+
+        #topo .logo {
+            margin: 13px 0 0 0;
+            float: left;
+        }
+
+        img {
+            border: 0;
+        }
+
+        #topo .busca {
+            position: absolute;
+            bottom: 00px;
+            left: 343px;
+            height: 44px;
+            width: 400px;
+            z-index: 2;
+        }
+
+        #topo .mais {
+            position: absolute;
+            top: 18px;
+            left: 363px;
+            width: 300px;
+            height: 39px;
+        }
+
+        #topo .mais b {
+            color: #ffdc73;
+            font-size: 14px;
+            display: block;
+            font-weight: normal;
+        }
+
+        #topo .mais b a {
+            color: #fff;
+            font-size: 13px;
+            text-decoration: underline;
+        }
+
+        #topo .menub {
+            position: absolute;
+            top: 70px;
+            left: 353px;
+            height: 32px;
+            width: 580px;
+        }
+
+        #topo .menub ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        #topo .menub li {
+            float: left;
+            padding: 0;
+            position: relative;
+        }
+
+        #topo .menub a {
+            color: #fff;
+            display: block;
+            font-size: 17px;
+            padding: 0 10px;
+            font-weight: bold;
+        }
+
+        #topo .telefone {
+            position: absolute;
+            bottom: 10px;
+            right: -10px;
+            width: 160px;
+            height: 40px;
+            color: #126602;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 23px;
+        }
+
+        #topo .dir {
+            background: url(/assets/topo_3.png) repeat-x bottom right;
         }
     </style>
 </head>
 
-<body class="bg-mcam-green-50 font-body text-gray-700">
+<body>
 
-    <header>
-        <div id="topo">
-            <div class="esq">
-                <a href="/"
+
+    <div id="topo">
+        <div class="esq">
+            <div class="esqb">&nbsp;</div>
+            <!-- <a href="/"
                     class="absolute top-4 left-4 md:left-8 transform hover:scale-105 transition-transform duration-300">
                     <img src="assets/logo.webp" alt="Logo da Empresa" class="h-16">
+                </a> -->
+        </div>
+
+        <div class="meiotp">
+            <div class="meioct">
+                <a href="/">
+                    <img src="/assets/mcam-logo-2.png" alt="mcam logo" class="logo">
                 </a>
-            </div>
 
-            <div class="meiotp">
-                <div class="w-full max-w-lg absolute top-10 left-1/2 -translate-x-1/2 transform">
-                    <div class="relative group">
-                        <input id="search-input" type="text" placeholder="O que você procura hoje?"
-                            class="w-full py-2.5 pl-5 pr-12 rounded-full border-2 border-gray-400 focus:border-red-700 focus:ring-2 focus:ring-red-300 transition-all duration-300 bg-white shadow-md">
-                        <button
-                            class="absolute inset-y-0 right-0 flex items-center justify-center w-12 bg-red-800 rounded-r-full hover:bg-red-700 transition-colors duration-300 group">
-                            <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                            </svg>
-                        </button>
+                <form name="busca1" method="get" action="/produtos/buscar" class="busca">
+                    <input type="text" class="text" id="qb" name="q" value="Digite o que procura"
+                        onclick="this.select()" style="border-radius: 10px;">
+                    <input type="submit" value="" class="sub">
+                </form>
+
+                <div class="mais">
+                    <b>Seja bem vindo! Faça seu <a href="/login">login</a> ou <a href="/cadastro">cadastre-se</a></b>
+                </div>
+
+                <div class="menub">
+                    <ul>
+                        <li><a href="/sobre">Loja Física</a></li>
+                        <li><a href="/contato">Fale Conosco</a></li>
+                        <li><a href="/login">Meus Pedidos</a></li>
+                        <li>
+                            <a href="#">Catálogos</a>
+                            <ol style="display: none;">
+                                <li><a href="/Catalogo Stylo Ferragens.pdf" target="_blank">Ferragens</a></li>
+                                <li><a href="/Manual 3000 e 3002 Trilho STY.pdf" target="_blank">Manual
+                                        3000/3002</a></li>
+                                <li><a href="/Manual 3001 MINI Trilho STY_2024.pdf" target="_blank">Manual 3001</a>
+                                </li>
+                                <li><a href="/MANUAL 3003.pdf" target="_blank">Manual 3003</a></li>
+                                <li><a href="/Manual 3005 Trilho STY 29-11 (23).pdf" target="_blank">Manual 3005</a>
+                                </li>
+
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="telefone" onmouseleave="$('#telefones').slideUp()">
+                    <a href="#" onmouseover="$('#telefones').slideDown()"
+                        onclick="$('#telefones').slideDown(); return false;">
+                        Confira nossos telefones
+                    </a>
+                    <div id="telefones"
+                        style="display: none; z-index: 100; background-color: rgb(255, 255, 255); padding: 8px; border: 1px solid rgb(176, 56, 56);">
+                        (41)3538-4004 (41)3538-4009 (41)3538-4005 (41)3538-3835 (41)3538-3833<br>
+                        <a class="tel"
+                            href="https://web.whatsapp.com/send?phone=5541998340538&amp;text=Contato%20via%20site"
+                            target="_blank">
+                            41 99834-0538
+                        </a>
                     </div>
                 </div>
-            </div>
 
-            <div class="dir">
-                <div class="absolute top-10 right-4 text-right">
-                    <p class="text-sm text-gray-600">Confira nossos telefones</p>
-                    <p class="font-bold text-gray-800 text-lg">(43) 99663-9255</p>
-                </div>
-                <div class="absolute top-2 right-4 text-center">
-                    <div class="w-48 p-2 border-2 border-gray-300 rounded-md bg-white/80">
-                        <p class="font-bold text-red-700">0 item(s)</p>
-                        <a href="#" class="text-sm text-gray-600 hover:underline">Realizar compra</a>
-                    </div>
-                </div>
             </div>
         </div>
-    </header>
+
+        <div class="dir">
+            <div class="dirb">&nbsp;</div>
+        </div>
+    </div>
+
 
 
 
